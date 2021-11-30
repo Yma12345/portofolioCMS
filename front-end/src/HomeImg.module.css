@@ -1,0 +1,27 @@
+.HomeImage {
+    height: 500px;
+    text-align: center;
+}
+
+.Img {
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+.CV {
+    display: inline-block;
+    background-color: white;
+    height: 400px;
+    width: 1450px;
+    text-align: center;
+    position: relative;
+    top: 140px;
+    left: 3%;
+    overflow-y: scroll;
+
+}
+
+.CVimg {
+    width: 1400px;
+}

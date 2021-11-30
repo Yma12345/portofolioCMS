@@ -1,0 +1,68 @@
+body {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #b3bdac;
+}
+
+.App {
+    text-align: center;
+  }
+  
+.Topbar {
+    width: 100%;
+    height: 70px;
+    background-color: #818181;
+    padding: 24px 48px 12px;
+    text-align: center;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.List > li{
+    float: left;
+    font-size: 24px;
+    list-style: none;
+    margin-right: 160px;
+}
+
+.List > li:hover{
+    border: 3px solid white;
+    padding: 10px;
+}
+
+.Footer {
+    width: 100%;
+    height: 160px;
+    background-color: #818181;
+    text-align: center;
+  
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.Footer > h1 {
+    font-weight: 400;
+    font-size: 80px;
+    position: relative;
+    bottom: 70px;
+}
+.Footer > p {
+    font-weight: 400;
+    font-size: 24px;
+    position: relative;
+    bottom: 130px;
+}
+
+.HomeImage {
+    height: 500px;
+    text-align: center;
+}
+
+.Img {
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
