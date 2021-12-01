@@ -1,8 +1,12 @@
 .ContactForm {
     position: relative;
-    top: 150px;
-    left: 70%;
+    bottom: 350px;
+    left: 65%;
     width: 300px;
+}
+
+.ContactInfo {
+  float: right;
 }
 
 .FeedbackInput {

@@ -23,10 +23,6 @@ class App extends Component {
         <div className={classes.MainContainer}>
         <HomeImg currentSelectedFeature={this.state.currentSelectedFeature}/>
         </div>
-        <footer className={classes.Footer}>
-          <h1>portfolio</h1>
-          <p>Rick van der Zanden</p>
-        </footer>
       </div>
     );
   }

@@ -18,6 +18,7 @@ export const ContactUs = () => {
 
   return (
     <form className={classes.ContactForm} ref={form} onSubmit={sendEmail}>
+      <h2>Stuur mij gerust een mail.</h2>
       <table>
           <tr>
               <td><input type="text" name="user_name" className={classes.FeedbackInput} placeholder="Naam"/></td>

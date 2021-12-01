@@ -25,3 +25,57 @@
 .CVimg {
     width: 1400px;
 }
+
+.ContactImg {
+    display: inline-block;
+    background-color: white;
+    height: 455px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    top: 107px;
+    left: 0%;
+}
+
+.ContactPage {
+   height: 100px;
+}
+
+.AboutMeImg {
+    display: inline-block;
+    background-color: white;
+    height: 455px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    top: 107px;
+    left: 0%;
+}
+
+.AboutMePage {
+   height: 100px;
+}
+
+.Footer {
+    width: 100%;
+    height: 160px;
+    background-color: #818181;
+    text-align: center;
+  
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.Footer > h1 {
+    font-weight: 400;
+    font-size: 80px;
+    position: relative;
+    bottom: 70px;
+}
+.Footer > p {
+    font-weight: 400;
+    font-size: 24px;
+    position: relative;
+    bottom: 130px;
+}
