@@ -19,14 +19,12 @@ const HomeImg = (props) => {
         : 
         props.currentSelectedFeature === 2 ?
         <div className={classes.Illustrator}>
-        <p>Illustrator</p>
         <footer className={classes.Footer}>
         </footer>
         </div>
         :
         props.currentSelectedFeature === 3 ?
         <div className={classes.Projects}>
-        <p>Projects</p>
         <GetProjects />
         <footer className={classes.Footer}>
         </footer>

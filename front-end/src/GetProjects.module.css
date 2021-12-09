@@ -1,30 +1,33 @@
 .ProjectContainer {
-    display: inline-block;
     background-color: white;
-    height: 380px;
-    width: 290px;
-    position: relative;
-    top: 90px;
-    margin-right: 40px;
-    left: 28%;
-}
-
-.ProjectBtn {
-    background-color: #818181;
-    width: 270px;
-    color: white;
-    position: relative;
-    top: 120px;
-    right: 30px;
-    padding: 7px;
-    border: 1px solid #818181;
-    font-size: 20px;
+    height: 400px;
+    width: 75%;
+    padding: 10px;
+    margin-top: 150px;
+    margin-left: 150px;
 }
 
 .ProjectImage {
-    height: 200px;
-    width: 270px;
-    position: relative;
-    right: 30px;
-    top: 10px;
+    height: 210px;
+    width: 310px;
+}
+
+.ProjectName {
+    color: #818181;
+    text-align: center;
+}
+
+.ProjectDetailContainer {
+    background-color: black;
+    border: 1px solid #818181;
+    width: 700px;
+    overflow-y: scroll;
+    height: 300px;
+    float: right;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.ProjectImageTwo {
+    width: 650px;
 }

@@ -7,7 +7,7 @@ import axios from 'axios';
 class GetProjects extends React.Component {
   state = {
     projects: [],
-    show: true
+    show: true,
   }
   componentDidMount() {
     axios.get(`http://127.0.0.1:8000/api/projects`)
@@ -15,26 +15,11 @@ class GetProjects extends React.Component {
         const projects = res.data;
         this.setState({ projects });
       })
-      this.setState({
-        show: this.state.show,
-        showDetails: !this.state.showDetails
-      });
+    this.setState({
+      show: this.state.show
+    });
   }
 
-  handleClick = (selectedButton) => {
-    const projectId = selectedButton.target.getAttribute("id");
-    axios.get("http://127.0.0.1:8000/api/projects/"+projectId)
-      .then(res => {
-        console.log(res);
-        const projectDetails = res.data;
-        this.setState({ projectDetails });
-      })
-      .catch(err => console.log(err));
-    this.setState({
-      showDetails: this.state.showDetails,
-      show: !this.state.show
-    });
-  };
   render() {
     return (
       <ul>
@@ -44,18 +29,29 @@ class GetProjects extends React.Component {
             .map(project =>
               <div className={classes.ProjectContainer}>
                 <ol key={project.id} >
+                  <div className={classes.ProjectName}>
+                    <h2>{project.projectName}</h2>
+                  </div>
+                <br></br>
                   <img
                     className={classes.ProjectImage}
                     src={project.projectImage}
                     key={project.id}
                     alt="project_images"
                   />
-                  <button id={project.id} className={classes.ProjectBtn} onClick={this.handleClick}>{project.projectName}</button>
+                <div className={classes.ProjectDetailContainer}>
+                <img
+                    className={classes.ProjectImageTwo}
+                    src={project.projectImageTwo}
+                    key={project.id}
+                    alt="project_images"
+                  />
+                  </div>
                 </ol>
               </div>
             )
         }
-</ul>
+    </ul>
     );
   }
 }
