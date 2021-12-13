@@ -5,6 +5,7 @@ import CVImage from '../src/rick-cv.png';
 import AboutImage from '../src/over-mij.jpg';
 import ContactUs from './Mailer';
 import GetProjects from './GetProjects';
+import GetGraphics from './GetGraphics';
 
 const HomeImg = (props) => {
     return(
@@ -19,6 +20,7 @@ const HomeImg = (props) => {
         : 
         props.currentSelectedFeature === 2 ?
         <div className={classes.Illustrator}>
+        <GetGraphics />
         <footer className={classes.Footer}>
         </footer>
         </div>

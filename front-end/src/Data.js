@@ -1,6 +1,6 @@
 const Data = {
     featureList: [
-        "home", "cv", "grafisch design", "projecten", "over mij", "contact" 
+        "home", "cv","illustrator", "indesign", "over mij", "contact" 
     ]
 }
 

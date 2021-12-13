@@ -10,10 +10,7 @@ class Graphic extends Model
     use HasFactory;
     protected $fillable = [
               'id',
-              'graphicName',
-              'graphicDescription',
               'graphicImage',
-              'graphicImageTwo',
               'created_at',
               'updated_at',
     ];

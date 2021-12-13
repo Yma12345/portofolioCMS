@@ -25,7 +25,6 @@ class ProjectSeeder extends Seeder
             Project::create(array(
               'id' => $project->id,
               'projectName' => $project->projectName,
-              'projectDescription' => $project->projectDescription,
               'projectImage' => $project->projectImage,
               'projectImageTwo' => $project->projectImageTwo,
               'created_at' => Carbon::now()->format('Y-m-d H:i:s'),

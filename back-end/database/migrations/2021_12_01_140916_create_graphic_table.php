@@ -15,10 +15,7 @@ class CreateGraphicTable extends Migration
     {
         Schema::create('graphics', function (Blueprint $table) {
             $table->id();
-            $table->string("graphicName");
-            $table->string("graphicDescription");
             $table->string("graphicImage");
-            $table->string("graphicImageTwo");
             $table->timestamps();
         });
     }

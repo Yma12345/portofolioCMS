@@ -24,10 +24,7 @@ class GraphicSeeder extends Seeder
         {
             Graphic::create(array(
               'id' => $graphic->id,
-              'graphicName' => $graphic->graphicName,
-              'graphicDescription' => $graphic->graphicDescription,
               'graphicImage' => $graphic->graphicImage,
-              'graphicImageTwo' => $graphic->graphicImageTwo,
               'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
               'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ));
