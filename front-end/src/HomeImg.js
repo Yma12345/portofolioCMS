@@ -6,6 +6,7 @@ import AboutImage from '../src/over-mij.jpg';
 import ContactUs from './Mailer';
 import GetProjects from './GetProjects';
 import GetGraphics from './GetGraphics';
+import LoginPage from './LoginPage';
 
 const HomeImg = (props) => {
     return(
@@ -54,6 +55,12 @@ const HomeImg = (props) => {
         <footer className={classes.Footer}>
         </footer>
         </div>
+        // :props.currentSelectedFeature === 6 ?
+        // <div className={classes.LoginPage}>
+        //     <LoginPage />
+        // <footer className={classes.Footer}>
+        // </footer>
+        // </div>
         :
         <div className={classes.Img}>
         <img className={classes.HomeImage} src={HomeImage}/>
