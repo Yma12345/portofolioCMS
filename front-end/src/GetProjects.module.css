@@ -40,3 +40,13 @@
 .ProjectImageTwo {
     width: 650px;
 }
+
+.CMSContainer {
+    color: black;
+    background-color: white;
+    height: 400px;
+    width: 75%;
+    padding: 10px;
+    margin-top: 150px;
+    margin-left: 150px;
+}

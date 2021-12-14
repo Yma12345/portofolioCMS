@@ -14,4 +14,15 @@ class GraphicController extends Controller
         return response()->json($graphics);
         //function to get the objects and returns it to json
     }
+
+    function createGraphic(Request $req){
+
+        Graphic::create([
+            'graphicImage' => $req->graphicImage,
+        ]);
+        //creates the object
+
+        //
+        return response()->json('Succesfully created a new object');
+    }
 }

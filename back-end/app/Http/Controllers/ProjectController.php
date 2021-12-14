@@ -20,4 +20,16 @@ class ProjectController extends Controller
         return response()->json($projects);
         //function to get the objects by id and returns it to json
     }
+    function createProject(Request $req){
+
+        Project::create([
+            'projectName' => $req->projectName,
+            'projectImage' => $req->projectImage,
+            'projectImageTwo' => $req->projectImageTwo,
+        ]);
+        //creates the object
+
+        //
+        return response()->json('Succesfully created a new object');
+    }
 }
