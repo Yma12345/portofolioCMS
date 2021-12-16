@@ -7,6 +7,7 @@ import ContactUs from './Mailer';
 import GetProjects from './GetProjects';
 import GetGraphics from './GetGraphics';
 import CMS from './CMS';
+import { BrowserRouter } from "react-router-dom";
 
 const HomeImg = (props) => {
     return(
@@ -56,8 +57,10 @@ const HomeImg = (props) => {
         </footer>
         </div>
         :props.currentSelectedFeature === 6 ?
-        <div className={classes.LoginPage}>
-            <CMS />
+        <div className={classes.CMScontainer}>
+            <BrowserRouter>
+                <CMS />
+            </BrowserRouter>
         <footer className={classes.Footer}>
         </footer>
         </div>

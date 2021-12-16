@@ -15,6 +15,13 @@ class GraphicController extends Controller
         //function to get the objects and returns it to json
     }
 
+    public function getById($id)
+    {
+        $graphics = Graphic::find($id);
+        return response()->json($graphics);
+        //function to get the objects by id and returns it to json
+    }
+
     function createGraphic(Request $req){
 
         Graphic::create([
@@ -24,5 +31,22 @@ class GraphicController extends Controller
 
         //
         return response()->json('Succesfully created a new object');
+    }
+
+    function editGraphic(Request $req, $id){
+        Graphic::find($id)
+        ->update([
+            'graphicImage' => $req->graphicImage,
+        ]);
+        //updates the variables
+        return response()->json('it worked');
+    }
+
+    function delete($id)
+    {
+        $graphics = Graphic::find($id);
+        $graphics->delete();
+        return response()->json('deleted');
+        //delete the object by id
     }
 }

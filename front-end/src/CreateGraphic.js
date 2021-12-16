@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import GraphicsList from './graphics-listing.component';
 
 export default class CreateGraphic extends React.Component {
     constructor(props) {
@@ -34,6 +35,10 @@ export default class CreateGraphic extends React.Component {
                 <input type="text" value={this.state.graphicImage} onChange={this.onChangeGraphicImage} placeholder="Zet hier het pad neer naar de afbeelding"></input>
                 <button type="submit">Create Graphic</button>
             </form>
+            <br></br>
+              <br></br>
+        
+              <GraphicsList> </GraphicsList>
         </div>
     );
 }

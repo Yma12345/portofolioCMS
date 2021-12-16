@@ -10,6 +10,8 @@ Route::post('projects/create', 'App\Http\Controllers\ProjectController@createPro
 Route::get('graphics', 'App\Http\Controllers\GraphicController@get');
 Route::get('graphics/{id}', 'App\Http\Controllers\GraphicController@getById');
 Route::post('graphics/create', 'App\Http\Controllers\GraphicController@createGraphic');
+Route::post('graphics/edit/{id}', 'App\Http\Controllers\GraphicController@editGraphic');
+Route::post('graphics/delete/{id}', 'App\Http\Controllers\GraphicController@delete');
 
 Route::post("user-signup", "UserController@userSignUp");
 
