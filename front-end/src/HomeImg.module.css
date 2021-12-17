@@ -12,8 +12,8 @@
 .CV {
     display: inline-block;
     background-color: white;
-    height: 400px;
-    width: 1450px;
+    height: 360px;
+    width: 85%;
     text-align: center;
     position: relative;
     top: 140px;
@@ -23,7 +23,7 @@
 }
 
 .CVimg {
-    width: 1400px;
+    width: 100%;
 }
 
 .ContactImg {
@@ -36,6 +36,11 @@
     top: 107px;
     left: 0%;
 }
+@media only screen and (max-width: 875px) {
+    .ContactImg {
+        display: none;
+    }
+  }
 
 .ContactPage {
    height: 100px;
@@ -51,11 +56,43 @@
     top: 107px;
     left: 0%;
 }
+@media only screen and (max-width: 1285px) {
+    .AboutMeImg {
+        height: 492px;
+        width: 30%;
+        margin-left: -5%;
+    }
+  }
+  @media only screen and (max-width: 1220px) {
+    .AboutMeImg {
+        margin-left: -15%;
+    }
+  }
+  @media only screen and (max-width: 964px) {
+    .AboutMeImg {
+        width: 865px;
+        height: 300px;
+    }
+  }
+  @media only screen and (max-width: 675px) {
+    .AboutMeImg {
+        width: 500px;
+        height: 200px;
+    }
+  }
 
 .AboutMeImage {
     height: 506px;
+    width: 768px;
     background-size: cover;
 }
+@media only screen and (max-width: 964px) {
+    .AboutMeImage {
+        width: 100%;
+        height: 170%;
+    }
+  }
+
 
 .AboutMePage {
    height: 100px;
@@ -73,6 +110,44 @@
     /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 
+@media only screen and (max-width: 1284px) {
+    .AboutMeText {
+        margin-left: 48%;
+        position: relative;
+        bottom: 330px;
+    }
+  }
+  @media only screen and (max-width: 1220px) {
+    .AboutMeText {
+        position: relative;
+        bottom: 100px;
+        margin-left: 28%;
+    }
+  }
+  @media only screen and (max-width: 1135px) {
+    .AboutMeText {
+        font-size: 16px;
+        width: 250px;
+        position: relative;
+        left: 23%;
+    }
+  }
+  @media only screen and (max-width: 964px) {
+    .AboutMeText {
+        background-color: #b3bdac;
+        position: relative;
+        bottom: 407%;
+        left: 30%;
+        height: 480px;
+        width: 42%;
+    }
+  }
+  @media only screen and (max-width: 675px) {
+    .AboutMeText {
+        position: relative;
+        bottom: 238%;
+    }
+  }
 .Footer {
     width: 100%;
     height: 202px;

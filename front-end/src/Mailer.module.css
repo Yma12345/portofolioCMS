@@ -1,8 +1,8 @@
 .ContactForm {
     position: relative;
-    bottom: 350px;
+    bottom: 410%;
     left: 65%;
-    width: 300px;
+    width: 30%;
 }
 
 .ContactInfo {
@@ -40,7 +40,7 @@
     color:white;
     font-size:24px;
     padding-top:10px;
-    padding-bottom:10px;
+    padding-bottom:5px;
     transition: all 0.3s;
     margin-top:-4px;
     font-weight:700;

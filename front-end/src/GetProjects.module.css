@@ -4,21 +4,36 @@
     width: 75%;
     padding: 10px;
     margin-top: 150px;
-    margin-left: 150px;
+    margin-left: 10%;
 }
+@media only screen and (max-width: 1525px) {
+    .ProjectContainer {
+        height: 650px;
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    .ProjectContainer {
+        margin-left: 5%;
+    }
+  }
+
 
 .ProjectImage {
     height: 210px;
     width: 310px;
     border: 5px solid #818181;
 }
+@media only screen and (max-width: 1100px) {
+  .ProjectImage {
+      width: 250px;
+  }
+}
 
 .GraphicImage {
-    height: 310px;
-    width: 420px;
+    height: 35%;
+    width: 45%;
     border: 5px solid #818181;
     margin-left: 25%;
-    margin-top: 2%;
 }
 
 .ProjectName {
@@ -36,7 +51,32 @@
     margin-right: 30px;
     text-align: center;
 }
-
+@media only screen and (max-width: 1030px) {
+    .ProjectDetailContainer {
+        height: 250px;
+        width: 450px;
+    }
+  }
+  @media only screen and (max-width: 765px) {
+    .ProjectDetailContainer {
+        height: 150px;
+        width: 350px;
+    }
+  }
+  @media only screen and (max-width: 630px) {
+    .ProjectDetailContainer {
+        height: 180px;
+        width: 250px;
+    }
+  }
+.GraphicContainer {
+  background-color: white;
+  height: 400px;
+  width: 75%;
+  padding: 10px;
+  margin-top: 150px;
+  margin-left: 10%;
+}
 .ProjectImageTwo {
     width: 650px;
 }

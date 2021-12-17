@@ -27,7 +27,7 @@ class GetGraphics extends React.Component {
           this.state.show &&
           this.state.graphics
             .map(graphic =>
-              <div className={classes.ProjectContainer}>
+              <div className={classes.GraphicContainer}>
                 <ol key={graphic.id} >
                 <br></br>
                   <img

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ProjectsList from './projects-listing.component';
 
-export default class CreateGraphic extends React.Component {
+export default class CreateProject extends React.Component {
     constructor(props) {
         super(props)
     
@@ -50,6 +51,10 @@ export default class CreateGraphic extends React.Component {
                 <input type="text" value={this.state.projectImageTwo} onChange={this.onChangeProjectImageTwo} placeholder="Zet hier het pad neer naar de afbeelding"></input>
                 <button type="submit">Create Project</button>
             </form>
+            <br></br>
+              <br></br>
+        
+              <ProjectsList> </ProjectsList>
         </div>
     );
 }

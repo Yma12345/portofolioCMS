@@ -32,4 +32,22 @@ class ProjectController extends Controller
         //
         return response()->json('Succesfully created a new object');
     }
+    function editProject(Request $req, $id){
+        Project::find($id)
+        ->update([
+            'projectName' => $req->projectName,
+            'projectImage' => $req->projectImage,
+            'projectImageTwo' => $req->projectImageTwo,
+        ]);
+        //updates the variables
+        return response()->json('it worked');
+    }
+
+    function delete($id)
+    {
+        $projects = Project::find($id);
+        $projects->delete();
+        return response()->json('deleted');
+        //delete the object by id
+    }
 }
