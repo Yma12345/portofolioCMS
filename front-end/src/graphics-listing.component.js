@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import GraphicTableRow from './GraphicTableRow';
+import { Link } from 'react-router-dom';
 
 
 export default class GraphicsList extends Component {

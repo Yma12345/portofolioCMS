@@ -21,7 +21,7 @@ class CMS extends React.Component {
                 <Route path="/edit-graphic/:id" element={<EditGraphic />} />
                 <Route path="/graphics-listing" element={<GraphicsList />} />
                 <Route path="/create-project" element={<CreateProject />} />
-                <Route path="/edit-project:id" element={<EditProject />} />
+                <Route path="/edit-project/:id" element={<EditProject />} />
                 <Route path="/projects-listing" element={<ProjectsList />} />
               </Routes>
             </div>

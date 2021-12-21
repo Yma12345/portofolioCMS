@@ -9,25 +9,20 @@ function EditGraphic() {
 
   useEffect(() => {
     axios.get(`http://localhost:8000/api/graphics/${id}`)
-    .then(res => {
-        setGraphicImage(res.data.graphicImage);
-      })
       .catch((error) => {
         console.log(error);
       })
   })
 
-  const onChangeGraphicImage = (e) => {
-    setGraphicImage(e.target.value);
-  }
-
   const onSubmit = (e) => {
     e.preventDefault()
 
-    const graphicObject = graphicImage
+    const graphicObject = {
+      graphicImage
+    }
     console.log(graphicObject);
 
-    axios.post(`http://localhost:8000/api/graphics/edit/${id}`, graphicObject)
+    axios.put(`http://localhost:8000/api/graphics/edit/${id}`, graphicObject)
       .then((res) => {
         console.log(res.data)
         console.log('Graphic successfully updated')
@@ -41,7 +36,7 @@ function EditGraphic() {
     return (
       <form onSubmit={onSubmit}>
           <label>Image</label>
-          <input type="text" value={graphicImage} onChange={onChangeGraphicImage} />
+          <input type="text" value={graphicImage} onChange={e => setGraphicImage(e.target.value)} />
         <button type="submit">
           Update Graphic
         </button>

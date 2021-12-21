@@ -11,25 +11,10 @@ function EditProject() {
 
   useEffect(() => {
     axios.get(`http://localhost:8000/api/projects/${id}`)
-    .then(res => {
-        setProjectName(res.data.projectName);
-        setProjectImage(res.data.projectImage);
-        setProjectImageTwo(res.data.projectImageTwo);
-      })
       .catch((error) => {
         console.log(error);
       })
   })
-
-  const onChangeProjectName = (e) => {
-    setProjectName(e.target.value);
-  }
-  const onChangeProjectImage = (e) => {
-    setProjectImage(e.target.value);
-  }
-  const onChangeProjectImageTwo = (e) => {
-    setProjectImageTwo(e.target.value);
-  }
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -39,10 +24,10 @@ function EditProject() {
     }
     console.log(projectObject);
 
-    axios.post(`http://localhost:8000/api/projects/edit/${id}`, projectObject)
+    axios.put(`http://localhost:8000/api/projects/edit/${id}`, projectObject)
       .then((res) => {
         console.log(res.data)
-        console.log('Graphic successfully updated')
+        console.log('Project successfully updated')
       }).catch((error) => {
         console.log(error)
       })
@@ -53,11 +38,11 @@ function EditProject() {
     return (
       <form onSubmit={onSubmit}>
           <label>Name</label>
-          <input type="text" value={projectName} onChange={onChangeProjectName} />
+          <input type="text" value={projectName} onChange={e => setProjectName(e.target.value)} />
           <label>Image</label>
-          <input type="text" value={projectImage} onChange={onChangeProjectImage} />
+          <input type="text" value={projectImage} onChange={e => setProjectImage(e.target.value)} />
           <label>Image Two</label>
-          <input type="text" value={projectImageTwo} onChange={onChangeProjectImageTwo} />
+          <input type="text" value={projectImageTwo} onChange={e => setProjectImageTwo(e.target.value)} />
         <button type="submit">
           Update Project
         </button>
