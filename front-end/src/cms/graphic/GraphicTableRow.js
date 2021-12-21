@@ -7,6 +7,7 @@ export default class GraphicTableRow extends Component {
         super(props);
         this.deleteGraphic = this.deleteGraphic.bind(this);
     }
+    //binds the function
 
     deleteGraphic() {
         axios.post('http://localhost:8000/api/graphics/delete/' + this.props.obj.id)
@@ -15,6 +16,7 @@ export default class GraphicTableRow extends Component {
             }).catch((error) => {
                 console.log(error)
             })
+            //deletes graphic
     }
     render() {
         return (
@@ -24,7 +26,9 @@ export default class GraphicTableRow extends Component {
                     <Link className="edit-link" to={"/edit-graphic/" + this.props.obj.id}>
                        <button size="sm" variant="info">Edit</button>
                     </Link>
+                    {/*btn to edit*/}
                     <button onClick={this.deleteGraphic} size="sm" variant="danger">Delete</button>
+                    {/*btn to delete*/}
                 </td>
             </tr>
         );

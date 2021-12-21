@@ -4,11 +4,12 @@ import axios from 'axios';
 
 
 
-class GetGraphics extends React.Component {
+class GetGraphics extends Component {
   state = {
     graphics: [],
     show: true,
   }
+  //makes a state for the graphics and the show
   componentDidMount() {
     axios.get(`http://127.0.0.1:8000/api/graphics`)
       .then(res => {
@@ -18,6 +19,7 @@ class GetGraphics extends React.Component {
     this.setState({
       show: this.state.show
     });
+    //if succesfull then it sets the result data into the state
   }
 
   render() {
@@ -38,6 +40,7 @@ class GetGraphics extends React.Component {
                   />
                 </ol>
               </div>
+              // maps through the graphics and prints the data
             )
         }
     </ul>

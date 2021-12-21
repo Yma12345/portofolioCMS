@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './HomeImg.module.css';
+import classes from './PageSwitcher.module.css';
 import HomeImage from '../src/rick-home.png';
 import CVImage from '../src/rick-cv.png';
 import AboutImage from '../src/over-mij.jpg';
@@ -7,14 +7,14 @@ import ContactUs from './Mailer';
 import GetProjects from './GetProjects';
 import GetGraphics from './GetGraphics';
 import CMS from './CMS';
-import { BrowserRouter } from "react-router-dom";
 
-const HomeImg = (props) => {
+const PageSwitcher = (props) => {
     return(
         props.currentSelectedFeature === 1 ?
+        /* checks which feature is clicked and returns the page for it*/
         <div className={classes.CVcontainer}>
             <div className={classes.CV}>
-            <img className={classes.CVimg} src={CVImage}></img>
+            <img className={classes.CVimg} src={CVImage} alt="cv-img"></img>
             </div>
         <footer className={classes.Footer}>
         </footer>
@@ -37,7 +37,7 @@ const HomeImg = (props) => {
         props.currentSelectedFeature === 4 ?
         <div className={classes.AboutMePage}>
             <div className={classes.AboutMeImg}>
-                <img className={classes.AboutMeImage} src={AboutImage}></img>
+                <img className={classes.AboutMeImage} src={AboutImage} alt="about-img"></img>
             </div>
             <div className={classes.AboutMeText}>
                 <h1>Wie ben ik?</h1>
@@ -58,15 +58,13 @@ const HomeImg = (props) => {
         </div>
         :props.currentSelectedFeature === 6 ?
         <div className={classes.CMScontainer}>
-            <BrowserRouter>
                 <CMS />
-            </BrowserRouter>
         <footer className={classes.Footer}>
         </footer>
         </div>
         :
         <div className={classes.Img}>
-        <img className={classes.HomeImage} src={HomeImage}/>
+        <img className={classes.HomeImage} src={HomeImage} alt="home-img"/>
         <footer className={classes.Footer}>
           <h1>portfolio</h1>
           <p>Rick van der Zanden</p>
@@ -75,4 +73,4 @@ const HomeImg = (props) => {
     )
 }
 
-export default HomeImg;
+export default PageSwitcher;

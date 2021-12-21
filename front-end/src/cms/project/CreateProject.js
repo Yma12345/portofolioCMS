@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import ProjectsList from './projects-listing.component';
 
-export default class CreateProject extends React.Component {
+export default class CreateProject extends Component {
     constructor(props) {
         super(props)
     

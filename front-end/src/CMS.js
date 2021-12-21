@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import classes from './CMS.module.css';
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import CreateGraphic from './CreateGraphic';
-import EditGraphic from './EditGraphic';
-import GraphicsList from "./graphics-listing.component";
-import CreateProject from './CreateProject';
-import EditProject from './EditProject';
-import ProjectsList from './projects-listing.component';
+import CreateGraphic from './cms/graphic/CreateGraphic';
+import EditGraphic from './cms/graphic/EditGraphic';
+import GraphicsList from "./cms/graphic/graphics-listing.component";
+import CreateProject from './cms/project/CreateProject';
+import EditProject from './cms/project/EditProject';
+import ProjectsList from './cms/project/projects-listing.component';
 
 
-class CMS extends React.Component {
+class CMS extends Component {
         render() {
-        return (
+        return (<Router>
             <div className={classes.CMScontainer}>
               <Routes>
                 <Route path="/" element={<><CreateGraphic/><CreateProject/></>}/>
@@ -25,7 +25,7 @@ class CMS extends React.Component {
                 <Route path="/projects-listing" element={<ProjectsList />} />
               </Routes>
             </div>
-  );
+            </Router>);
   
     }
 

@@ -4,11 +4,12 @@ import axios from 'axios';
 
 
 
-class GetProjects extends React.Component {
+class GetProjects extends Component {
   state = {
     projects: [],
     show: true,
   }
+  //makes a state for the projects and the show
   componentDidMount() {
     axios.get(`http://127.0.0.1:8000/api/projects`)
       .then(res => {
@@ -18,6 +19,7 @@ class GetProjects extends React.Component {
     this.setState({
       show: this.state.show
     });
+    //if succesfull then it sets the result data into the state
   }
 
   render() {
@@ -49,6 +51,7 @@ class GetProjects extends React.Component {
                   </div>
                 </ol>
               </div>
+              // maps through the graphics and prints the data
             )
         }
     </ul>

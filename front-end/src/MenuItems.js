@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classes from './MenuItems.module.css';
 
 const MenuItems = (props) => {
@@ -11,6 +11,7 @@ const MenuItems = (props) => {
         return(
             <a onClick={() => props.onFeatureItemClick(pos)} key={pos} className={classArr.join(' ')}>{item}</a>
         )
+        //makes the classes into an array and adds a class when a specefic pos is clicked
     })
 
     return(

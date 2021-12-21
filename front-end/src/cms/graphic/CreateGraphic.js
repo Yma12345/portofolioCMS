@@ -2,30 +2,34 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import GraphicsList from './graphics-listing.component';
 
-export default class CreateGraphic extends React.Component {
+export default class CreateGraphic extends Component {
     constructor(props) {
         super(props)
     
-        // Setting up functions
+
         this.onChangeGraphicImage = this.onChangeGraphicImage.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        //setting the fuctions
     
-        // Setting up state
         this.state = {
           graphicImage: '',
         }
+        //makes the state
       }
       onChangeGraphicImage(e) {
         this.setState({graphicImage: e.target.value})
       }
+      //changes the value onchange
       onSubmit(e) {
         e.preventDefault()
          const graphic = {
           graphicImage: this.state.graphicImage,
         };
+        //makes a const from the current state
         axios.post('http://localhost:8000/api/graphics/create', graphic)
           .then(res => console.log(res.data));
           this.setState({graphicImage: ''})
+          //posts it
  }
  render() {
     return (
@@ -39,6 +43,7 @@ export default class CreateGraphic extends React.Component {
               <br></br>
         
               <GraphicsList> </GraphicsList>
+              {/*calls the graphiclist*/}
         </div>
     );
 }

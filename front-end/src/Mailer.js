@@ -14,6 +14,7 @@ export const ContactUs = () => {
       }, (error) => {
           console.log(error.text);
       })
+      //sends the given data in the form into the emailjs service with the given template and user
   }
 
   return (

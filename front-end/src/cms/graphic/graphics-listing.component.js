@@ -1,24 +1,25 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import ProjectTableRow from './ProjectTableRow';
-import classes from './CMS.module.css';
+import GraphicTableRow from './GraphicTableRow';
 
 
-export default class ProjectsList extends Component {
+export default class GraphicsList extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-        projects: []
+      graphics: []
     };
+    //makes state
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8000/api/projects/')
+    axios.get('http://localhost:8000/api/graphics/')
       .then(res => {
         this.setState({
-            projects: res.data
+          graphics: res.data
         });
+        //sets data into state
       })
       .catch((error) => {
         console.log(error);
@@ -26,24 +27,24 @@ export default class ProjectsList extends Component {
   }
 
   DataTable() {
-    return this.state.projects.map((res, i) => {
-      return <ProjectTableRow obj={res} key={i} />;
+    return this.state.graphics.map((res, i) => {
+      return <GraphicTableRow obj={res} key={i} />;
     });
+    //maps through the rows with the result and a key
   }
 
 
   render() {
-    return (<div className={classes.tableProject}>
+    return (<div className="table-wrapper">
       <table striped bordered hover>
         <thead>
           <tr>
-            <th>Name</th>
             <th>Image</th>
-            <th>Image two</th>
           </tr>
         </thead>
         <tbody>
           {this.DataTable()}
+          {/*calls the tablerow*/}
         </tbody>
       </table>
     </div>);

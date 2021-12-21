@@ -4,6 +4,8 @@ import {useParams} from "react-router-dom";
 
 function EditGraphic() {
   const {id} = useParams();
+  //brings the param from the route
+
         // Setting up state
         const [graphicImage,setGraphicImage] = useState('');
 
@@ -12,6 +14,7 @@ function EditGraphic() {
       .catch((error) => {
         console.log(error);
       })
+      //gets the graphics by id
   })
 
   const onSubmit = (e) => {
@@ -20,6 +23,7 @@ function EditGraphic() {
     const graphicObject = {
       graphicImage
     }
+    //makes the value into object
     console.log(graphicObject);
 
     axios.put(`http://localhost:8000/api/graphics/edit/${id}`, graphicObject)
@@ -29,6 +33,7 @@ function EditGraphic() {
       }).catch((error) => {
         console.log(error)
       })
+      //imports into backend
   }
 
 

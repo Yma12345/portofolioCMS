@@ -1,23 +1,22 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import GraphicTableRow from './GraphicTableRow';
-import { Link } from 'react-router-dom';
+import ProjectTableRow from './ProjectTableRow';
 
 
-export default class GraphicsList extends Component {
+export default class ProjectsList extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      graphics: []
+        projects: []
     };
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8000/api/graphics/')
+    axios.get('http://localhost:8000/api/projects/')
       .then(res => {
         this.setState({
-          graphics: res.data
+            projects: res.data
         });
       })
       .catch((error) => {
@@ -26,18 +25,20 @@ export default class GraphicsList extends Component {
   }
 
   DataTable() {
-    return this.state.graphics.map((res, i) => {
-      return <GraphicTableRow obj={res} key={i} />;
+    return this.state.projects.map((res, i) => {
+      return <ProjectTableRow obj={res} key={i} />;
     });
   }
 
 
   render() {
-    return (<div className="table-wrapper">
+    return (<div>
       <table striped bordered hover>
         <thead>
           <tr>
+            <th>Name</th>
             <th>Image</th>
+            <th>Image two</th>
           </tr>
         </thead>
         <tbody>
