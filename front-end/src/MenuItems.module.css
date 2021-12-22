@@ -29,7 +29,7 @@ body {
     float: left;
     font-size: 24px;
     list-style: none;
-    margin-right: 110px;
+    margin-right: 7%;
     position: relative;
     bottom: 110px;
 }
@@ -38,55 +38,18 @@ body {
     border: 3px solid white;
 }
 
-@media only screen and (max-width: 1530px) {
+@media only screen and (max-width: 1490px) {
     .ListItem {
-        margin-right: 100px;
+        margin-right: 5%;
     }
   }
-  @media only screen and (max-width: 1540px) {
+  @media only screen and (max-width: 1080px) {
     .ListItem {
-        margin-right: 80px;
+        margin-right: 3%;
     }
   }
-  @media only screen and (max-width: 1290px) {
+  @media only screen and (max-width: 940px) {
     .ListItem {
-        margin-right: 60px;
+        display: none;
     }
   }
-  @media only screen and (max-width: 1170px) {
-    .ListItem {
-        margin-right: 40px;
-    }
-  }
-  @media only screen and (max-width: 1050px) {
-    .ListItem {
-        margin-right: 20px;
-    }
-  }
-
-  /* .hamburger {
-    width: 2rem; 
-        height: 2rem; 
-        display: flex; 
-        justify-content: space-around; 
-        flex-flow: column nowrap; 
-    
-        position: relative;
-        right: 1400px;
-        bottom: 110px;
-}
-
-.burger { 
-    width: 2rem; 
-    height: 0.25rem; 
-    border-radius: 10px; 
-    background-color: white; 
-    transform-origin: 1px; 
-    transition: all 0.3s linear; 
-}
-    
-@media (max-width: 1230px){
-    .hamburger{ 
-        display: fixed;
-    }
-} */
