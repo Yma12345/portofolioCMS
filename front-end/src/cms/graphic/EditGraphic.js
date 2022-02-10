@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import {useParams} from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 function EditGraphic() {
   const {id} = useParams();
+  let navigate = useNavigate();
   //brings the param from the route
 
         // Setting up state
@@ -30,6 +31,7 @@ function EditGraphic() {
       .then((res) => {
         console.log(res.data)
         console.log('Graphic successfully updated')
+        navigate('/');
       }).catch((error) => {
         console.log(error)
       })

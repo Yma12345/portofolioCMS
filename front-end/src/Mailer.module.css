@@ -1,8 +1,16 @@
 .ContactForm {
     position: relative;
-    bottom: 410%;
-    left: 65%;
-    width: 30%;
+    bottom: 435%;
+    left: 66%;
+    width: 16%;
+    text-align: center;
+}
+@media only screen and (max-width: 964px) {
+  .ContactForm {
+      position: relative;
+      top: 85%;
+      left: 40%;
+  }
 }
 
 .ContactInfo {
@@ -20,11 +28,22 @@
     border:2px solid #818181;
     transition: all 0.3s;
     padding: 13px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     width:100%;
     box-sizing: border-box;
     outline:0;
   }
+  @media only screen and (max-width: 964px) {
+    .FeedbackInput {
+      margin-bottom: 1%;
+    }
+  }
+  @media only screen and (max-width: 601px) {
+    .FeedbackInput {
+      height: 60px;
+    }
+  }
+
   ::placeholder {
     color: white;
     opacity: 1;
@@ -45,6 +64,12 @@
     margin-top:-4px;
     font-weight:700;
   }
+  @media only screen and (max-width: 964px) {
+    .FeedbackInput {
+      margin-bottom: 1%;
+    }
+  }
+  
   
   textarea {
     height: 150px;

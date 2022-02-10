@@ -4,7 +4,8 @@
     height: 300px;
     width: 75%;
     padding: 10px;
-    margin-top: 150px;
-    margin-left: 150px;
+    margin: 0 auto;
+    position: relative;
+    top: 70px;
     overflow-y: scroll;
 }

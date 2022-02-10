@@ -29,7 +29,6 @@ class GetGraphics extends Component {
           this.state.show &&
           this.state.graphics
             .map(graphic =>
-              <div className={classes.GraphicContainer}>
                 <ol key={graphic.id} >
                 <br></br>
                   <img
@@ -39,7 +38,6 @@ class GetGraphics extends Component {
                     alt="graphic_images"
                   />
                 </ol>
-              </div>
               // maps through the graphics and prints the data
             )
         }
